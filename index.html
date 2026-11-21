@@ -6,7 +6,24 @@
 
 <title>ABHI Design Studio</title>
 <link rel="icon" type="image/png" href="abhi-logo.png">
-
+.floating-whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
 <style>
 * {
   margin: 0;
@@ -423,8 +440,11 @@ footer {
     Get in touch with ABHI Design Studio.
   </p>
 
-  <a href="mailto:your-business-email@example.com" class="btn">
-    CONTACT US
+  <a href="https://wa.me/2349045868393"
+     class="whatsapp-btn"
+     target="_blank"
+     rel="noopener">
+    CHAT WITH US ON WHATSAPP
   </a>
 </section>
 
@@ -432,6 +452,12 @@ footer {
   <p>© 2026 ABHI Design Studio. All Rights Reserved.</p>
   <p>Designed with creativity by ABHI.</p>
 </footer>
-
+<a href="https://wa.me/2349045868393"
+   class="floating-whatsapp"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with us on WhatsApp">
+  W
+</a>
 </body>
 </html>
