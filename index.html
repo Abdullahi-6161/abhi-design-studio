@@ -6,24 +6,7 @@
 
 <title>ABHI Design Studio</title>
 <link rel="icon" type="image/png" href="abhi-logo.png">
-.floating-whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  z-index: 1000;
-}
+
 <style>
 * {
   margin: 0;
@@ -61,7 +44,6 @@ header {
 }
 
 .logo h2 {
-  color: #fff;
   font-size: 20px;
 }
 
@@ -71,10 +53,10 @@ header {
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  margin-left: 18px;
-  font-size: 14px;
+  margin-left: 15px;
+  font-size: 13px;
 }
 
 nav a:hover {
@@ -89,7 +71,7 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #160000, #080808 65%);
+  background: linear-gradient(135deg, #250000, #080808 70%);
 }
 
 .hero h1 {
@@ -141,7 +123,8 @@ section {
   margin: auto;
 }
 
-.services {
+.services,
+.pricing {
   background: #101010;
 }
 
@@ -201,8 +184,9 @@ section {
   margin-top: 8px;
 }
 
+/* PRICING */
+
 .pricing {
-  background: #101010;
   text-align: center;
 }
 
@@ -241,10 +225,29 @@ section {
   min-height: 45px;
 }
 
-.price-card h4 {
+.price {
   margin-top: 18px;
-  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
 }
+
+.price .naira {
+  color: white;
+}
+
+.price .usd {
+  color: #e50914;
+}
+
+.price small {
+  display: block;
+  color: #888;
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* CONTACT */
 
 .contact {
   text-align: center;
@@ -255,6 +258,46 @@ section {
   margin-bottom: 20px;
 }
 
+.whatsapp-btn {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+  background: #1da851;
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.floating-whatsapp:hover {
+  background: #1da851;
+}
+
 footer {
   background: #111;
   text-align: center;
@@ -263,6 +306,8 @@ footer {
   font-size: 13px;
   border-top: 1px solid #292929;
 }
+
+/* MOBILE */
 
 @media (max-width: 650px) {
   header {
@@ -303,6 +348,8 @@ footer {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
   <div class="logo">
     <img src="abhi-logo.png" alt="ABHI Logo">
@@ -318,25 +365,39 @@ footer {
   </nav>
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
   <h1>ABHI <span>DESIGN</span></h1>
-  <p>Creative designs. Powerful identities. Visual experiences that make brands stand out.</p>
+
+  <p>
+    Creative designs. Powerful identities.
+    Visual experiences that make brands stand out.
+  </p>
+
   <a href="#portfolio" class="btn">EXPLORE OUR WORK</a>
 </section>
 
+<!-- ABOUT -->
+
 <section class="about" id="about">
   <h2 class="section-title">ABOUT <span>US</span></h2>
+
   <p>
-    ABHI Design Studio is a creative design brand focused on producing
-    unique and professional visual designs. From logos to promotional
-    posters, we turn creative ideas into powerful designs.
+    ABHI Design Studio is a creative design brand focused
+    on producing unique and professional visual designs.
+    From logos to promotional posters, we turn creative
+    ideas into powerful designs.
   </p>
 </section>
+
+<!-- SERVICES -->
 
 <section class="services" id="services">
   <h2 class="section-title">OUR <span>SERVICES</span></h2>
 
   <div class="service-grid">
+
     <div class="service-card">
       <h3>Logo Design</h3>
       <p>Unique logos that give brands their identity.</p>
@@ -361,13 +422,17 @@ footer {
       <h3>Brand Identity</h3>
       <p>Consistent visual identities for businesses.</p>
     </div>
+
   </div>
 </section>
+
+<!-- PORTFOLIO -->
 
 <section class="portfolio" id="portfolio">
   <h2 class="section-title">SELECTED <span>WORK</span></h2>
 
   <div class="cards">
+
     <div class="work">
       <img src="abhi-logo.png" alt="Logo Design">
       <h3>LOGO DESIGN</h3>
@@ -387,8 +452,11 @@ footer {
       <img src="wallpaper-design.png" alt="Digital Wallpaper">
       <h3>DIGITAL WALLPAPER</h3>
     </div>
+
   </div>
 </section>
+
+<!-- PRICING -->
 
 <section class="pricing" id="pricing">
   <h2 class="section-title">OUR <span>PRICING</span></h2>
@@ -402,35 +470,57 @@ footer {
     <div class="price-card">
       <h3>LOGO DESIGN</h3>
       <p>Creative and memorable brand logos.</p>
-      <h4>Price on Request</h4>
+      <div class="price">
+        <span class="naira">₦10,000</span> /
+        <span class="usd">$10</span>
+        <small>NGN / USD</small>
+      </div>
     </div>
 
     <div class="price-card">
       <h3>POSTER DESIGN</h3>
       <p>Eye-catching promotional posters.</p>
-      <h4>Price on Request</h4>
+      <div class="price">
+        <span class="naira">₦5,000</span> /
+        <span class="usd">$5</span>
+        <small>NGN / USD</small>
+      </div>
     </div>
 
     <div class="price-card">
       <h3>T-SHIRT DESIGN</h3>
       <p>Unique designs for clothing brands.</p>
-      <h4>Price on Request</h4>
+      <div class="price">
+        <span class="naira">₦7,000</span> /
+        <span class="usd">$7</span>
+        <small>NGN / USD</small>
+      </div>
     </div>
 
     <div class="price-card">
       <h3>DIGITAL WALLPAPER</h3>
       <p>Custom digital artwork and wallpapers.</p>
-      <h4>Price on Request</h4>
+      <div class="price">
+        <span class="naira">₦3,000</span> /
+        <span class="usd">$3</span>
+        <small>NGN / USD</small>
+      </div>
     </div>
 
     <div class="price-card">
       <h3>BRAND IDENTITY</h3>
       <p>A consistent visual identity for your brand.</p>
-      <h4>Price on Request</h4>
+      <div class="price">
+        <span class="naira">₦25,000</span> /
+        <span class="usd">$25</span>
+        <small>NGN / USD</small>
+      </div>
     </div>
 
   </div>
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
   <h2 class="section-title">LET'S <span>CONNECT</span></h2>
@@ -448,10 +538,8 @@ footer {
   </a>
 </section>
 
-<footer>
-  <p>© 2026 ABHI Design Studio. All Rights Reserved.</p>
-  <p>Designed with creativity by ABHI.</p>
-</footer>
+<!-- FLOATING WHATSAPP BUTTON -->
+
 <a href="https://wa.me/2349045868393"
    class="floating-whatsapp"
    target="_blank"
@@ -459,5 +547,13 @@ footer {
    aria-label="Chat with us on WhatsApp">
   W
 </a>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>© 2026 ABHI Design Studio. All Rights Reserved.</p>
+  <p>Designed with creativity by ABHI.</p>
+</footer>
+
 </body>
 </html>
