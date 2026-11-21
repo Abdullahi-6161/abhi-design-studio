@@ -12,15 +12,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #0b0b0e;
-  color: white;
+  background: #080808;
+  color: #fff;
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
@@ -29,157 +26,208 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 8%;
-  background: #111114;
+  padding: 18px 8%;
+  background: #111;
   border-bottom: 1px solid #292929;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo img {
-  width: 65px;
-  height: 65px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
 }
 
+.logo h2 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.logo span,
+.section-title span {
+  color: #e50914;
+}
+
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin-left: 18px;
   font-size: 14px;
 }
 
 nav a:hover {
-  color: #e50925;
+  color: #e50914;
 }
 
 .hero {
-  min-height: 85vh;
+  min-height: 430px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 20px;
-  background: radial-gradient(circle, #351018, #0b0b0e 65%);
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #160000, #080808 65%);
 }
 
 .hero h1 {
-  font-size: clamp(42px, 8vw, 75px);
-  letter-spacing: 4px;
+  font-size: clamp(38px, 7vw, 65px);
+  letter-spacing: 3px;
 }
 
 .hero h1 span {
-  color: #e50925;
+  color: #e50914;
 }
 
 .hero p {
-  color: #c4c4c4;
+  color: #bbb;
+  margin: 15px 0 25px;
   max-width: 550px;
-  margin: 18px auto 28px;
 }
 
-.button {
+.btn {
   display: inline-block;
-  padding: 13px 28px;
-  background: #e50925;
+  background: #e50914;
   color: white;
-  text-decoration: none;
+  padding: 12px 25px;
   border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
 }
 
+.btn:hover {
+  background: #b90009;
+}
+
 section {
-  padding: 75px 8%;
+  padding: 65px 8%;
 }
 
 .section-title {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 35px;
-}
-
-.section-title span {
-  color: #e50925;
+  font-size: 30px;
+  margin-bottom: 25px;
 }
 
 .about {
   text-align: center;
+}
+
+.about p {
+  color: #bbb;
   max-width: 750px;
   margin: auto;
-  color: #bbb;
 }
 
-.services, .portfolio {
-  background: #111114;
+.services {
+  background: #101010;
 }
 
-.cards {
+.service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
 }
 
-.card {
-  background: #19191e;
-  padding: 30px 20px;
+.service-card {
+  background: #191919;
+  padding: 25px 15px;
+  text-align: center;
   border: 1px solid #292929;
   border-radius: 8px;
-  text-align: center;
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #e50925;
+.service-card h3 {
+  color: #e50914;
+  margin-bottom: 10px;
 }
 
-.card h3 {
-  color: #e50925;
-  margin-bottom: 12px;
-}
-
-.card p {
+.service-card p {
   color: #aaa;
   font-size: 14px;
 }
 
-/* PORTFOLIO GALLERY */
+.portfolio {
+  text-align: center;
+}
 
-.portfolio .cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.cards {
   max-width: 650px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .work {
-  width: 100%;
-  height: 145px;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background: #111;
-  border: 1px solid #8b0000;
-  border-radius: 10px;
-  text-align: center;
+  background: #171717;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #292929;
 }
 
 .work img {
   width: 100%;
-  height: 105px;
+  height: 145px;
   object-fit: contain;
-  display: block;
-  background: #080808;
+  border-radius: 5px;
 }
 
 .work h3 {
-  font-size: 11px;
-  padding: 8px 3px;
-  color: white;
+  color: #e50914;
+  font-size: 14px;
+  margin-top: 8px;
 }
 
-/* CONTACT */
+.pricing {
+  background: #101010;
+  text-align: center;
+}
+
+.pricing-intro {
+  color: #aaa;
+  margin: -10px 0 30px;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.price-card {
+  background: #191919;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 25px 15px;
+  transition: 0.3s;
+}
+
+.price-card:hover {
+  border-color: #e50914;
+  transform: translateY(-4px);
+}
+
+.price-card h3 {
+  color: #e50914;
+  margin-bottom: 12px;
+}
+
+.price-card p {
+  color: #bbb;
+  font-size: 14px;
+  min-height: 45px;
+}
+
+.price-card h4 {
+  margin-top: 18px;
+  color: #fff;
+}
 
 .contact {
   text-align: center;
@@ -187,66 +235,50 @@ section {
 
 .contact p {
   color: #bbb;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
-
-.contact .button {
-  background: #25D366;
-  border-radius: 30px;
-  padding: 15px 30px;
-  transition: 0.3s;
-}
-
-.contact .button:hover {
-  background: #128C7E;
-  transform: translateY(-4px);
-}
-
-/* FLOATING WHATSAPP BUTTON */
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 14px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  z-index: 999;
-}
-
-.whatsapp-float:hover {
-  background: #128C7E;
-}
-
-/* FOOTER */
 
 footer {
+  background: #111;
   text-align: center;
-  padding: 25px;
-  background: #111114;
+  padding: 22px;
   color: #777;
   font-size: 13px;
+  border-top: 1px solid #292929;
 }
 
-/* MOBILE RESPONSIVENESS */
-
-@media(max-width: 600px) {
+@media (max-width: 650px) {
   header {
     flex-direction: column;
     gap: 15px;
   }
 
-  nav a {
-    margin: 0 7px;
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .portfolio .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  section {
+    padding: 50px 6%;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+
+  .work img {
+    height: 105px;
+  }
+
+  .work h3 {
+    font-size: 12px;
   }
 }
 </style>
@@ -257,60 +289,60 @@ footer {
 <header>
   <div class="logo">
     <img src="abhi-logo.png" alt="ABHI Logo">
+    <h2>ABHI <span>DESIGN</span></h2>
   </div>
 
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#portfolio">Work</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <h1>ABHI <span>DESIGN</span></h1>
-
-  <p>
-    Creative designs. Powerful identities.
-    Visual experiences that leave a lasting impression.
-  </p>
-
-  <a href="#portfolio" class="button">EXPLORE MY WORK</a>
+  <p>Creative designs. Powerful identities. Visual experiences that make brands stand out.</p>
+  <a href="#portfolio" class="btn">EXPLORE OUR WORK</a>
 </section>
 
-<section id="about">
-  <h2 class="section-title">ABOUT <span>ABHI</span></h2>
-
-  <p class="about">
-    Welcome to ABHI Design Studio, a creative space
-    dedicated to transforming ideas into powerful
-    visual designs. Every project is an opportunity
-    to create something unique.
+<section class="about" id="about">
+  <h2 class="section-title">ABOUT <span>US</span></h2>
+  <p>
+    ABHI Design Studio is a creative design brand focused on producing
+    unique and professional visual designs. From logos to promotional
+    posters, we turn creative ideas into powerful designs.
   </p>
 </section>
 
 <section class="services" id="services">
-  <h2 class="section-title">MY <span>SERVICES</span></h2>
+  <h2 class="section-title">OUR <span>SERVICES</span></h2>
 
-  <div class="cards">
-    <div class="card">
+  <div class="service-grid">
+    <div class="service-card">
       <h3>Logo Design</h3>
-      <p>Unique logos and visual brand identities.</p>
+      <p>Unique logos that give brands their identity.</p>
     </div>
 
-    <div class="card">
+    <div class="service-card">
       <h3>Poster Design</h3>
       <p>Creative promotional and advertising posters.</p>
     </div>
 
-    <div class="card">
+    <div class="service-card">
       <h3>T-Shirt Design</h3>
-      <p>Original graphics for clothing and merchandise.</p>
+      <p>Original graphics and clothing designs.</p>
     </div>
 
-    <div class="card">
-      <h3>Wallpapers</h3>
-      <p>Creative digital wallpapers and artwork.</p>
+    <div class="service-card">
+      <h3>Digital Wallpaper</h3>
+      <p>Creative digital artwork and wallpapers.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Brand Identity</h3>
+      <p>Consistent visual identities for businesses.</p>
     </div>
   </div>
 </section>
@@ -319,7 +351,6 @@ footer {
   <h2 class="section-title">SELECTED <span>WORK</span></h2>
 
   <div class="cards">
-
     <div class="work">
       <img src="abhi-logo.png" alt="Logo Design">
       <h3>LOGO DESIGN</h3>
@@ -339,33 +370,68 @@ footer {
       <img src="wallpaper-design.png" alt="Digital Wallpaper">
       <h3>DIGITAL WALLPAPER</h3>
     </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2 class="section-title">OUR <span>PRICING</span></h2>
+
+  <p class="pricing-intro">
+    Professional designs for brands, businesses and creators.
+  </p>
+
+  <div class="pricing-cards">
+
+    <div class="price-card">
+      <h3>LOGO DESIGN</h3>
+      <p>Creative and memorable brand logos.</p>
+      <h4>Price on Request</h4>
+    </div>
+
+    <div class="price-card">
+      <h3>POSTER DESIGN</h3>
+      <p>Eye-catching promotional posters.</p>
+      <h4>Price on Request</h4>
+    </div>
+
+    <div class="price-card">
+      <h3>T-SHIRT DESIGN</h3>
+      <p>Unique designs for clothing brands.</p>
+      <h4>Price on Request</h4>
+    </div>
+
+    <div class="price-card">
+      <h3>DIGITAL WALLPAPER</h3>
+      <p>Custom digital artwork and wallpapers.</p>
+      <h4>Price on Request</h4>
+    </div>
+
+    <div class="price-card">
+      <h3>BRAND IDENTITY</h3>
+      <p>A consistent visual identity for your brand.</p>
+      <h4>Price on Request</h4>
+    </div>
 
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <h2 class="section-title">LET'S <span>WORK</span></h2>
+  <h2 class="section-title">LET'S <span>CONNECT</span></h2>
 
-  <p>Have a creative project in mind? Let's make it happen.</p>
+  <p>
+    Have a creative project in mind?
+    Get in touch with ABHI Design Studio.
+  </p>
 
-  <a href="https://wa.me/23490045868393"
-     class="button"
-     target="_blank"
-     rel="noopener">
-     CHAT WITH ABHI ON WHATSAPP
+  <a href="mailto:your-business-email@example.com" class="btn">
+    CONTACT US
   </a>
 </section>
 
 <footer>
-  © 2026 ABHI Design Studio. All rights reserved.
+  <p>© 2026 ABHI Design Studio. All Rights Reserved.</p>
+  <p>Designed with creativity by ABHI.</p>
 </footer>
-
-<a href="https://wa.me/2349045868393"
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener">
-   WhatsApp
-</a>
 
 </body>
 </html>
