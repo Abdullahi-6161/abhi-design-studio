@@ -4,7 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ABHI Design Studio</title>
+/* ABHI PORTFOLIO GALLERY */
+.work {
+  background: #151515;
+  border: 1px solid #8b0000;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s ease;
+}
 
+.work img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  background: #080808;
+}
+
+.work h3 {
+  color: #ffffff;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.work:hover {
+  transform: translateY(-6px);
+  border-color: #ff0000;
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 <style>
 * {
   margin: 0;
