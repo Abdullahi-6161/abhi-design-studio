@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="google-site-verification" content="W0ejHm6juR1Y88Hl1lRd9OV-6ZK_Dw3-LuPJqvBuhXM">
-<meta name="google-site-verification" content="Zw3chklkHGn3W32p_ohXAoVAJuuWkc80udJsoynjDsc">
-
-<meta name="description" content="ABHI Design Studio offers professional graphic design services including logos, posters, T-shirt graphics, wallpapers and brand identity.">
-
-<title>ABHI Design Studio | Creative Graphic Design</title>
-
-<link rel="icon" href="abhi-logo.png">
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-site-verification" content="W0ejHm6juR1Y88Hl1lRd9OV-6ZK_Dw3-LuPJqvBuhXM">
+<meta name="google-site-verification" content="Zw3chklkHGn3W32p_ohXAoVAJuuWkc80udJsoynjDsc"><meta name="description" content="ABHI Design Studio offers professional graphic design services including logos, posters, T-shirt graphics, wallpapers and brand identity."><title>ABHI Design Studio | Creative Graphic Design</title><link rel="icon" href="abhi-logo.png"><style>
 
 * {
     margin: 0;
@@ -28,6 +17,7 @@
     --white: #ffffff;
     --light: #f5f5f5;
     --grey: #666666;
+    --gold: #d4af37;
 }
 
 body {
@@ -370,6 +360,122 @@ footer span {
     background: #128C7E;
 }
 
+/* FEEDBACK BUTTON */
+
+.feedback-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #d4af37, #f5df91);
+    color: #171717;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 14px;
+}
+
+.feedback-float:hover {
+    background: #c49b20;
+}
+
+/* FEEDBACK FORM */
+
+.feedback-box {
+    display: none;
+    position: fixed;
+    bottom: 85px;
+    left: 20px;
+    width: 340px;
+    max-width: calc(100% - 40px);
+    background: #171717;
+    color: white;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1002;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.feedback-box h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.feedback-box p {
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.feedback-box input,
+.feedback-box select,
+.feedback-box textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin: 9px 0;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #252525;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.feedback-box input::placeholder,
+.feedback-box textarea::placeholder {
+    color: #aaa;
+}
+
+.feedback-box textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.feedback-box select option {
+    background: #252525;
+    color: white;
+}
+
+.feedback-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.feedback-actions button {
+    flex: 1;
+    padding: 12px 5px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.feedback-whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.feedback-email {
+    background: var(--gold);
+    color: #171717;
+}
+
+.feedback-close {
+    float: right;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    line-height: 1;
+}
+
 /* MOBILE RESPONSIVENESS */
 
 @media(max-width: 700px) {
@@ -404,302 +510,203 @@ footer span {
         padding: 65px 5%;
     }
 
+    .feedback-box {
+        bottom: 80px;
+        left: 12px;
+        width: 320px;
+        max-width: calc(100% - 24px);
+    }
+
+    .feedback-float {
+        left: 12px;
+        bottom: 15px;
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    .whatsapp-float {
+        right: 12px;
+        bottom: 15px;
+        padding: 12px 15px;
+        font-size: 12px;
+    }
 }
 
-</style>
-</head>
+</style></head><body><!-- HEADER --><header><div class="logo">
+    <img src="abhi-logo.png" alt="ABHI Design Studio Logo">
+    <h2>ABHI <span>DESIGN STUDIO</span></h2>
+</div>
 
-<body>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<!-- HEADER -->
+</header><!-- HERO --><section class="hero" id="home"><div class="hero-content">
 
-<header>
-
-    <div class="logo">
-        <img src="abhi-logo.png" alt="ABHI Design Studio Logo">
-        <h2>ABHI <span>DESIGN STUDIO</span></h2>
-    </div>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <h1>
-            WE TURN IDEAS INTO
-            <span>STUNNING DESIGNS</span>
-        </h1>
-
-        <p>
-            Professional graphic design solutions for businesses,
-            brands and individuals worldwide.
-        </p>
-
-        <a href="#portfolio" class="btn">
-            EXPLORE OUR DESIGNS
-        </a>
-
-        <a href="#contact" class="btn btn-outline">
-            CONTACT US
-        </a>
-
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-    <h2 class="section-title">
-        ABOUT <span>US</span>
-    </h2>
+    <h1>
+        WE TURN IDEAS INTO
+        <span>STUNNING DESIGNS</span>
+    </h1>
 
     <p>
-        ABHI Design Studio is a creative graphic design brand
-        dedicated to transforming ideas into outstanding visual
-        experiences.
-
-        We specialize in logo design, brand identity, promotional
-        posters, T-shirt graphics, digital wallpapers and other
-        creative visual solutions.
-
-        Our goal is to help businesses and individuals communicate
-        their ideas through unique and professional designs.
+        Professional graphic design solutions for businesses,
+        brands and individuals worldwide.
     </p>
 
-</section>
+    <a href="#portfolio" class="btn">
+        EXPLORE OUR DESIGNS
+    </a>
 
-<!-- SERVICES -->
+    <a href="#contact" class="btn btn-outline">
+        CONTACT US
+    </a>
 
-<section id="services">
+</div>
 
-    <h2 class="section-title">
-        OUR <span>SERVICES</span>
-    </h2>
+</section><!-- ABOUT --><section class="about" id="about"><h2 class="section-title">
+    ABOUT <span>US</span>
+</h2>
 
-    <div class="services-grid">
+<p>
+    ABHI Design Studio is a creative graphic design brand
+    dedicated to transforming ideas into outstanding visual
+    experiences.
 
-        <div class="service-card">
-            <h3>Logo Design</h3>
-            <p>Unique and professional logos for brands and businesses.</p>
-        </div>
+    We specialize in logo design, brand identity, promotional
+    posters, T-shirt graphics, digital wallpapers and other
+    creative visual solutions.
 
-        <div class="service-card">
-            <h3>Brand Identity</h3>
-            <p>Creative visual identities that make brands recognizable.</p>
-        </div>
+    Our goal is to help businesses and individuals communicate
+    their ideas through unique and professional designs.
+</p>
 
-        <div class="service-card">
-            <h3>Poster Design</h3>
-            <p>Attractive promotional posters for events and businesses.</p>
-        </div>
+</section><!-- SERVICES --><section id="services"><h2 class="section-title">
+    OUR <span>SERVICES</span>
+</h2>
 
-        <div class="service-card">
-            <h3>T-Shirt Design</h3>
-            <p>Creative graphics and designs for T-shirts.</p>
-        </div>
+<div class="services-grid">
 
-        <div class="service-card">
-            <h3>Digital Wallpapers</h3>
-            <p>Beautiful wallpapers for phones and digital devices.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Award Designs</h3>
-            <p>Creative award certificates and recognition designs.</p>
-        </div>
-
+    <div class="service-card">
+        <h3>Logo Design</h3>
+        <p>Unique and professional logos for brands and businesses.</p>
     </div>
 
-</section>
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio" id="portfolio">
-
-    <h2 class="section-title">
-        OUR <span>PORTFOLIO</span>
-    </h2>
-
-    <div class="portfolio-grid">
-
-        <!-- LOGO & BRAND IDENTITY -->
-
-        <div class="portfolio-card">
-
-            <a
-            href="https://www.behance.net/gallery/258848825/ABHI-Design-Studio-Logo-Brand-Identity-Designs"
-            target="_blank"
-            rel="noopener noreferrer">
-
-                <img src="abhi-logo.png" alt="Logo and Brand Identity Designs">
-
-            </a>
-
-            <h3>Logo & Brand Identity</h3>
-
-            <a
-            class="project-link"
-            href="https://www.behance.net/gallery/258848825/ABHI-Design-Studio-Logo-Brand-Identity-Designs"
-            target="_blank"
-            rel="noopener noreferrer">
-
-                VIEW PROJECT →
-
-            </a>
-
-        </div>
-
-        <!-- PROMOTIONAL POSTERS -->
-
-        <div class="portfolio-card">
-
-            <a
-            href="https://www.behance.net/gallery/258848969/ABHI-Design-Studio-Promotional-Posters"
-            target="_blank"
-            rel="noopener noreferrer">
-
-                <img src="poster-design.png" alt="Promotional Posters and Advertisements">
-
-            </a>
-
-            <h3>Promotional Posters</h3>
-
-            <a
-            class="project-link"
-            href="https://www.behance.net/gallery/258848969/ABHI-Design-Studio-Promotional-Posters"
-            target="_blank"
-            rel="noopener noreferrer">
-
-                VIEW PROJECT →
-
-            </a>
-
-        </div>
-
-        <!-- T-SHIRT & WALLPAPER DESIGNS -->
-
-        <div class="portfolio-card">
-
-            <a
-            href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
-            target="_blank"
-            rel="noopener noreferrer">
-
-                <img src="tshirt-design.png" alt="T-Shirt and Wallpaper Designs">
-
-            </a>
-
-            <h3>T-Shirt & Wallpaper Designs</h3>
-
-            <a
-            class="project-link"
-            href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
-            target="_blank"
-            rel="noopener noreferrer">
-
-                VIEW PROJECT →
-
-            </a>
-
-        </div>
-
+    <div class="service-card">
+        <h3>Brand Identity</h3>
+        <p>Creative visual identities that make brands recognizable.</p>
     </div>
 
-    <div style="text-align:center; margin-top:35px;">
+    <div class="service-card">
+        <h3>Poster Design</h3>
+        <p>Attractive promotional posters for events and businesses.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>T-Shirt Design</h3>
+        <p>Creative graphics and designs for T-shirts.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Digital Wallpapers</h3>
+        <p>Beautiful wallpapers for phones and digital devices.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Award Designs</h3>
+        <p>Creative award certificates and recognition designs.</p>
+    </div>
+
+</div>
+
+</section><!-- PORTFOLIO --><section class="portfolio" id="portfolio"><h2 class="section-title">
+    OUR <span>PORTFOLIO</span>
+</h2>
+
+<div class="portfolio-grid">
+
+    <div class="portfolio-card">
 
         <a
-        href="https://www.behance.net/abdullaabdulsa16"
+        href="https://www.behance.net/gallery/258848825/ABHI-Design-Studio-Logo-Brand-Identity-Designs"
         target="_blank"
-        rel="noopener noreferrer"
-        class="btn">
+        rel="noopener noreferrer">
 
-            VIEW ALL BEHANCE PROJECTS
+            <img src="abhi-logo.png" alt="Logo and Brand Identity Designs">
+
+        </a>
+
+        <h3>Logo & Brand Identity</h3>
+
+        <a
+        class="project-link"
+        href="https://www.behance.net/gallery/258848825/ABHI-Design-Studio-Logo-Brand-Identity-Designs"
+        target="_blank"
+        rel="noopener noreferrer">
+
+            VIEW PROJECT →
 
         </a>
 
     </div>
 
-</section>
+    <div class="portfolio-card">
 
-<!-- PRICING -->
+        <a
+        href="https://www.behance.net/gallery/258848969/ABHI-Design-Studio-Promotional-Posters"
+        target="_blank"
+        rel="noopener noreferrer">
 
-<section id="pricing">
+            <img src="poster-design.png" alt="Promotional Posters and Advertisements">
 
-    <h2 class="section-title">
-        OUR <span>PRICING</span>
-    </h2>
+        </a>
 
-    <div class="pricing-grid">
+        <h3>Promotional Posters</h3>
 
-        <div class="price-card">
-            <h3>Logo Design</h3>
-            <div class="price">₦10,000 / $10</div>
-            <p>Professional logo creation.</p>
-        </div>
+        <a
+        class="project-link"
+        href="https://www.behance.net/gallery/258848969/ABHI-Design-Studio-Promotional-Posters"
+        target="_blank"
+        rel="noopener noreferrer">
 
-        <div class="price-card">
-            <h3>Poster Design</h3>
-            <div class="price">₦5,000 / $5</div>
-            <p>Creative promotional posters.</p>
-        </div>
+            VIEW PROJECT →
 
-        <div class="price-card">
-            <h3>T-Shirt Design</h3>
-            <div class="price">₦7,000 / $7</div>
-            <p>Custom T-shirt graphics.</p>
-        </div>
-
-        <div class="price-card">
-            <h3>Wallpaper Design</h3>
-            <div class="price">₦3,000 / $3</div>
-            <p>Custom digital wallpapers.</p>
-        </div>
-
-        <div class="price-card">
-            <h3>Brand Identity</h3>
-            <div class="price">₦25,000 / $25</div>
-            <p>Complete visual brand identity.</p>
-        </div>
+        </a>
 
     </div>
 
-</section>
+    <div class="portfolio-card">
 
-<!-- FIND US ONLINE -->
+        <a
+        href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
+        target="_blank"
+        rel="noopener noreferrer">
 
-<section class="social" id="social">
+            <img src="tshirt-design.png" alt="T-Shirt and Wallpaper Designs">
 
-    <h2 class="section-title">
-        FIND US <span>ONLINE</span>
-    </h2>
+        </a>
 
-    <p>
-        Connect with ABHI Design Studio and explore our creative work.
-    </p>
+        <h3>T-Shirt & Wallpaper Designs</h3>
 
-    <a
-    href="https://www.linkedin.com/in/abdullahi-abdulsalam-b30527451"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn">
+        <a
+        class="project-link"
+        href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
+        target="_blank"
+        rel="noopener noreferrer">
 
-        CONNECT ON LINKEDIN
+            VIEW PROJECT →
 
-    </a>
+        </a>
+
+    </div>
+
+</div>
+
+<div style="text-align:center; margin-top:35px;">
 
     <a
     href="https://www.behance.net/abdullaabdulsa16"
@@ -707,77 +714,288 @@ footer span {
     rel="noopener noreferrer"
     class="btn">
 
-        VIEW BEHANCE PROFILE
+        VIEW ALL BEHANCE PROJECTS
 
     </a>
 
-    <a
-    href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn btn-outline">
+</div>
 
-        VIEW LATEST PROJECT
+</section><!-- PRICING --><section id="pricing"><h2 class="section-title">
+    OUR <span>PRICING</span>
+</h2>
 
-    </a>
+<div class="pricing-grid">
 
-</section>
+    <div class="price-card">
+        <h3>Logo Design</h3>
+        <div class="price">₦10,000 / $10</div>
+        <p>Professional logo creation.</p>
+    </div>
 
-<!-- CONTACT -->
+    <div class="price-card">
+        <h3>Poster Design</h3>
+        <div class="price">₦5,000 / $5</div>
+        <p>Creative promotional posters.</p>
+    </div>
 
-<section class="contact" id="contact">
+    <div class="price-card">
+        <h3>T-Shirt Design</h3>
+        <div class="price">₦7,000 / $7</div>
+        <p>Custom T-shirt graphics.</p>
+    </div>
 
-    <h2 class="section-title">
-        LET'S <span>CONNECT</span>
-    </h2>
+    <div class="price-card">
+        <h3>Wallpaper Design</h3>
+        <div class="price">₦3,000 / $3</div>
+        <p>Custom digital wallpapers.</p>
+    </div>
 
-    <p>
-        Have a creative project in mind?
-        Get in touch with ABHI Design Studio.
-    </p>
+    <div class="price-card">
+        <h3>Brand Identity</h3>
+        <div class="price">₦25,000 / $25</div>
+        <p>Complete visual brand identity.</p>
+    </div>
 
-    <p>
-        WhatsApp: 09045868393
-    </p>
+</div>
 
-    <a
-    href="https://wa.me/2349045868393"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn">
+</section><!-- FIND US ONLINE --><section class="social" id="social"><h2 class="section-title">
+    FIND US <span>ONLINE</span>
+</h2>
 
-        CHAT WITH US ON WHATSAPP
+<p>
+    Connect with ABHI Design Studio and explore our creative work.
+</p>
 
-    </a>
+<a
+href="https://www.linkedin.com/in/abdullahi-abdulsalam-b30527451"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
 
-</section>
+    CONNECT ON LINKEDIN
 
-<!-- FOOTER -->
+</a>
 
-<footer>
+<a
+href="https://www.behance.net/abdullaabdulsa16"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
 
-    <p>
-        © 2026 <span>ABHI DESIGN STUDIO</span>.
-        All Rights Reserved.
-    </p>
+    VIEW BEHANCE PROFILE
 
-    <p>
-        Creative • Professional • Worldwide
-    </p>
+</a>
 
-</footer>
+<a
+href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-outline">
 
-<!-- FLOATING WHATSAPP -->
+    VIEW LATEST PROJECT
+
+</a>
+
+</section><!-- CONTACT --><section class="contact" id="contact"><h2 class="section-title">
+    LET'S <span>CONNECT</span>
+</h2>
+
+<p>
+    Have a creative project in mind?
+    Get in touch with ABHI Design Studio.
+</p>
+
+<p>
+    WhatsApp: 09045868393
+</p>
 
 <a
 href="https://wa.me/2349045868393"
 target="_blank"
 rel="noopener noreferrer"
-class="whatsapp-float">
+class="btn">
 
-    WhatsApp
+    CHAT WITH US ON WHATSAPP
 
 </a>
 
-</body>
+</section><!-- FOOTER --><footer><p>
+    © 2026 <span>ABHI DESIGN STUDIO</span>.
+    All Rights Reserved.
+</p>
+
+<p>
+    Creative • Professional • Worldwide
+</p>
+
+</footer><!-- FLOATING WHATSAPP --><a
+href="https://wa.me/2349045868393"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp-float">
+
+WhatsApp
+
+</a><!-- FLOATING FEEDBACK BUTTON --><button
+type="button"
+class="feedback-float"
+onclick="toggleFeedback()"
+aria-label="Open feedback form">
+
+✨ Give Feedback
+
+</button><!-- FEEDBACK FORM --><div
+class="feedback-box"
+id="feedbackBox"
+role="dialog"
+aria-label="Customer feedback form"><button
+type="button"
+class="feedback-close"
+onclick="toggleFeedback()"
+aria-label="Close feedback form">
+
+    ×
+
+</button>
+
+<h3>We Value Your Feedback</h3>
+
+<p>
+    Help ABHI Design Studio improve our services.
+    We would love to hear from you!
+</p>
+
+<form id="feedbackForm">
+
+    <input
+    type="text"
+    id="fbName"
+    placeholder="Your name (optional)"
+    autocomplete="name">
+
+    <input
+    type="email"
+    id="fbEmail"
+    placeholder="Your email (optional)"
+    autocomplete="email">
+
+    <select id="fbRating" required>
+        <option value="">Rate your experience</option>
+        <option value="Excellent - 5 stars">⭐⭐⭐⭐⭐ Excellent</option>
+        <option value="Very Good - 4 stars">⭐⭐⭐⭐ Very Good</option>
+        <option value="Good - 3 stars">⭐⭐⭐ Good</option>
+        <option value="Fair - 2 stars">⭐⭐ Fair</option>
+        <option value="Poor - 1 star">⭐ Poor</option>
+    </select>
+
+    <textarea
+    id="fbMessage"
+    placeholder="Write your feedback or suggestion..."
+    required></textarea>
+
+    <div class="feedback-actions">
+
+        <button
+        type="button"
+        class="feedback-whatsapp"
+        onclick="sendFeedback('whatsapp')">
+
+            WhatsApp
+
+        </button>
+
+        <button
+        type="button"
+        class="feedback-email"
+        onclick="sendFeedback('email')">
+
+            Email
+
+        </button>
+
+    </div>
+
+</form>
+
+</div><!-- FEEDBACK JAVASCRIPT --><script>
+
+function toggleFeedback() {
+
+    const box = document.getElementById("feedbackBox");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+
+}
+
+function sendFeedback(method) {
+
+    const name = document.getElementById("fbName").value.trim();
+
+    const email = document.getElementById("fbEmail").value.trim();
+
+    const rating = document.getElementById("fbRating").value;
+
+    const message = document.getElementById("fbMessage").value.trim();
+
+    if (!rating || !message) {
+
+        alert("Please select a rating and write your feedback.");
+
+        return;
+
+    }
+
+    if (email && !document.getElementById("fbEmail").checkValidity()) {
+
+        alert("Please enter a valid email address.");
+
+        return;
+
+    }
+
+    const feedback =
+
+`ABHI DESIGN STUDIO - CUSTOMER FEEDBACK
+
+Name: ${name || "Not provided"}
+
+Email: ${email || "Not provided"}
+
+Rating: ${rating}
+
+Feedback:
+${message}
+
+Sent from ABHI Design Studio website.`;
+
+    if (method === "whatsapp") {
+
+        const whatsappURL =
+        "https://wa.me/2349045868393?text=" +
+        encodeURIComponent(feedback);
+
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+    }
+
+    else if (method === "email") {
+
+        const emailURL =
+        "mailto:abhie6161@gmail.com" +
+        "?subject=" +
+        encodeURIComponent("ABHI Design Studio - Customer Feedback") +
+        "&body=" +
+        encodeURIComponent(feedback);
+
+        window.location.href = emailURL;
+
+    }
+
+}
+
+</script></body>
 </html>
