@@ -2,7 +2,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-site-verification" content="W0ejHm6juR1Y88Hl1lRd9OV-6ZK_Dw3-LuPJqvBuhXM">
-<meta name="google-site-verification" content="Zw3chklkHGn3W32p_ohXAoVAJuuWkc80udJsoynjDsc"><meta name="description" content="ABHI Design Studio offers professional graphic design services including logos, posters, T-shirt graphics, wallpapers and brand identity."><meta name="theme-color" content="#ffffff"><title>ABHI Design Studio | Creative Graphic Design</title><link rel="icon" type="image/png" href="abhi-logo.png"><style>
+<meta name="google-site-verification" content="Zw3chklkHGn3W32p_ohXAoVAJuuWkc80udJsoynjDsc"><meta name="description" content="ABHI Design Studio offers professional graphic design services including logos, posters, T-shirt graphics, wallpapers and brand identity.">
+<meta name="theme-color" content="#ffffff"><title>ABHI Design Studio | Creative Graphic Design</title><link rel="icon" type="image/png" href="abhi-official-logo.png"><style>
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +52,9 @@ header {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+    background: #000;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .logo img {
@@ -540,10 +544,10 @@ footer span {
         font-size: 12px;
     }
 }
-</style></head><body><!-- HEADER WITH OFFICIAL LOGO --><header><div class="logo">
+</style></head><body><!-- HEADER --><header><div class="logo">
     <a href="#home" aria-label="ABHI Design Studio Home">
-        <img src="abhi-logo.png"
-             alt="ABHI Design Studio Official Logo">
+        <img src="abhi-official-logo.png"
+             alt="ABHI Design Studio Official Silver and Gold Logo">
     </a>
 </div>
 
@@ -646,8 +650,8 @@ footer span {
             target="_blank"
             rel="noopener noreferrer">
 
-            <img src="abhi-logo.png"
-                 alt="Logo and Brand Identity Designs">
+            <img src="abhi-official-logo.png"
+                 alt="ABHI Design Studio Logo and Brand Identity Designs">
 
         </a>
 
@@ -733,7 +737,7 @@ footer span {
 
 </div>
 
-</section><!-- PRICING --><section id="pricing"><h2 class="section-title">
+</section><!-- PRICING: UNCHANGED --><section id="pricing"><h2 class="section-title">
     OUR <span>PRICING</span>
 </h2>
 
@@ -957,19 +961,13 @@ function sendFeedback(method) {
     const message = document.getElementById("fbMessage").value.trim();
 
     if (!rating || !message) {
-
         alert("Please select a rating and write your feedback.");
-
         return;
-
     }
 
     if (email && !document.getElementById("fbEmail").checkValidity()) {
-
         alert("Please enter a valid email address.");
-
         return;
-
     }
 
     const feedback =
