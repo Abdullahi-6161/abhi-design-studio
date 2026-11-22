@@ -1,581 +1,698 @@
-
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-site-verification" content="W0ejHm6juR1Y88Hl1lRd9OV-6ZK_Dw3-LuPJqvBuhXM" /><title>ABHI Design Studio | Professional Graphic Design & Branding</title><meta name="description" content="ABHI Design Studio creates professional logos, promotional posters, T-shirt graphics, digital wallpapers and brand identities for businesses and creators worldwide."><meta name="keywords" content="ABHI Design Studio, graphic designer, logo design, poster design, branding, T-shirt design, digital wallpaper, graphic design Nigeria"><link rel="icon" type="image/png" href="abhi-logo.png"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification" content="W0ejHm6juR1Y88Hl1lRd9OV-6ZK_Dw3-LuPJqvBuhXM">
+<meta name="google-site-verification" content="Zw3chklkHGn3W32p_ohXAoVAJuuWkc80udJsoynjDsc">
+
+<meta name="description" content="ABHI Design Studio offers professional graphic design services including logos, posters, T-shirt graphics, wallpapers and brand identity.">
+
+<title>ABHI Design Studio | Creative Graphic Design</title>
+
+<link rel="icon" href="abhi-logo.png">
+
+<style>
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --red: #e50914;
+    --black: #171717;
+    --white: #ffffff;
+    --light: #f5f5f5;
+    --grey: #666666;
 }
 
 body {
-  background: #080808;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    background: var(--white);
+    color: var(--black);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
 }
 
+/* HEADER */
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
-  background: #111;
-  border-bottom: 1px solid #292929;
+    background: white;
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .logo h2 {
-  font-size: 20px;
+    font-size: 20px;
+    color: var(--black);
 }
 
-.logo span,
-.section-title span {
-  color: #e50914;
+.logo span {
+    color: var(--red);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-  color: #e50914;
+    color: var(--red);
 }
 
-.hero {
-  min-height: 430px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #250000, #080808 70%);
-}
-
-.hero h1 {
-  font-size: clamp(38px, 7vw, 65px);
-  letter-spacing: 3px;
-}
-
-.hero h1 span {
-  color: #e50914;
-}
-
-.hero p {
-  color: #bbb;
-  margin: 15px 0 25px;
-  max-width: 550px;
-}
-
-.btn {
-  display: inline-block;
-  background: #e50914;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #b90009;
-}
+/* GENERAL SECTIONS */
 
 section {
-  padding: 65px 8%;
+    padding: 80px 7%;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 25px;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: var(--black);
 }
 
+.section-title span {
+    color: var(--red);
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b80009;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+.btn-outline:hover {
+    background: var(--red);
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #eeeeee);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #171717;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+.hero p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* ABOUT */
+
 .about {
-  text-align: center;
+    background: white;
+    text-align: center;
 }
 
 .about p {
-  color: #bbb;
-  max-width: 750px;
-  margin: auto;
+    max-width: 850px;
+    margin: auto;
+    color: #555;
 }
 
-.services,
-.pricing {
-  background: #101010;
+/* SERVICES */
+
+#services {
+    background: #f5f5f5;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
 }
 
 .service-card {
-  background: #191919;
-  padding: 25px 15px;
-  text-align: center;
-  border: 1px solid #292929;
-  border-radius: 8px;
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--red);
+    transform: translateY(-5px);
 }
 
 .service-card h3 {
-  color: #e50914;
-  margin-bottom: 10px;
+    color: var(--red);
+    margin-bottom: 10px;
 }
 
 .service-card p {
-  color: #aaa;
-  font-size: 14px;
+    color: #666;
 }
+
+/* PORTFOLIO */
 
 .portfolio {
-  text-align: center;
+    background: white;
 }
 
-.cards {
-  max-width: 650px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
 }
 
-.work {
-  background: #171717;
-  border-radius: 8px;
-  padding: 12px;
-  border: 1px solid #292929;
+.portfolio-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid #eeeeee;
 }
 
-.work img {
-  width: 100%;
-  height: 145px;
-  object-fit: contain;
-  border-radius: 5px;
+.portfolio-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
 }
 
-.work h3 {
-  color: #e50914;
-  font-size: 14px;
-  margin-top: 8px;
+.portfolio-card:hover img {
+    transform: scale(1.04);
+}
+
+.portfolio-card h3 {
+    padding: 15px;
+    text-align: center;
+    color: #222;
 }
 
 /* PRICING */
 
-.pricing {
-  text-align: center;
+#pricing {
+    background: #f5f5f5;
 }
 
-.pricing-intro {
-  color: #aaa;
-  margin: -10px 0 30px;
-}
-
-.pricing-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 18px;
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
 }
 
 .price-card {
-  background: #191919;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 25px 15px;
-  transition: 0.3s;
-}
-
-.price-card:hover {
-  border-color: #e50914;
-  transform: translateY(-4px);
+    background: white;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 .price-card h3 {
-  color: #e50914;
-  margin-bottom: 12px;
-}
-
-.price-card p {
-  color: #bbb;
-  font-size: 14px;
-  min-height: 45px;
+    color: var(--red);
+    margin-bottom: 15px;
 }
 
 .price {
-  margin-top: 18px;
-  font-size: 19px;
-  font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #171717;
 }
 
-.price .naira {
-  color: white;
+.price-card p {
+    color: #666;
 }
 
-.price .usd {
-  color: #e50914;
+/* SOCIAL LINKS */
+
+.social {
+    background: white;
+    text-align: center;
 }
 
-.price small {
-  display: block;
-  color: #888;
-  font-size: 11px;
-  font-weight: normal;
-  margin-top: 5px;
+.social p {
+    color: #555;
+    margin-bottom: 20px;
 }
 
 /* CONTACT */
 
 .contact {
-  text-align: center;
+    background: #f5f5f5;
+    text-align: center;
 }
 
 .contact p {
-  color: #bbb;
-  margin-bottom: 20px;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-.whatsapp-btn {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 13px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.whatsapp-btn:hover {
-  background: #1da851;
-}
-
-/* SOCIAL LINKS */
-
-.social-links {
-  background: #101010;
-  text-align: center;
-}
-
-.social-intro {
-  color: #aaa;
-  margin-bottom: 30px;
-}
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 650px;
-  margin: auto;
-}
-
-.social-card {
-  background: #191919;
-  padding: 30px 20px;
-  border: 1px solid #333;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.social-card:hover {
-  border-color: #e50914;
-  transform: translateY(-5px);
-}
-
-.social-card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.social-card p {
-  color: #aaa;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.social-btn {
-  display: inline-block;
-  padding: 11px 22px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.linkedin-btn {
-  background: #0A66C2;
-}
-
-.behance-btn {
-  background: #1769FF;
-}
-
-/* FLOATING WHATSAPP */
-
-.floating-whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  z-index: 1000;
-}
-
-.floating-whatsapp:hover {
-  background: #1da851;
-}
+/* FOOTER */
 
 footer {
-  background: #111;
-  text-align: center;
-  padding: 22px;
-  color: #777;
-  font-size: 13px;
-  border-top: 1px solid #292929;
+    background: #171717;
+    text-align: center;
+    padding: 28px 15px;
+    color: white;
 }
 
-/* MOBILE */
-
-@media (max-width: 650px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav a {
-    margin: 0;
-    font-size: 12px;
-  }
-
-  section {
-    padding: 50px 6%;
-  }
-
-  .cards {
-    gap: 10px;
-  }
-
-  .work img {
-    height: 105px;
-  }
-
-  .work h3 {
-    font-size: 12px;
-  }
+footer span {
+    color: #ff2632;
 }
-</style></head><body><!-- HEADER --><header>
-  <div class="logo">
-    <img src="abhi-logo.png" alt="ABHI Logo">
-    <h2>ABHI <span>DESIGN</span></h2>
-  </div>  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#social">Socials</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header><!-- HERO --><section class="hero">
-  <h1>ABHI <span>DESIGN</span></h1>  <p>
-    Creative designs. Powerful identities.
-    Visual experiences that make brands stand out.
-  </p><a href="#portfolio" class="btn">EXPLORE OUR WORK</a>
 
-</section><!-- ABOUT --><section class="about" id="about">
-  <h2 class="section-title">ABOUT <span>US</span></h2>  <p>
-    ABHI Design Studio is a creative design brand focused
-    on producing unique and professional visual designs.
-    From logos to promotional posters, we turn creative
-    ideas into powerful designs.
-  </p>
-</section><!-- SERVICES --><section class="services" id="services">
-  <h2 class="section-title">OUR <span>SERVICES</span></h2>  <div class="service-grid"><div class="service-card">
-  <h3>Logo Design</h3>
-  <p>Unique logos that give brands their identity.</p>
-</div>
+/* WHATSAPP BUTTON */
 
-<div class="service-card">
-  <h3>Poster Design</h3>
-  <p>Creative promotional and advertising posters.</p>
-</div>
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-<div class="service-card">
-  <h3>T-Shirt Design</h3>
-  <p>Original graphics and clothing designs.</p>
-</div>
+.whatsapp-float:hover {
+    background: #128C7E;
+}
 
-<div class="service-card">
-  <h3>Digital Wallpaper</h3>
-  <p>Creative digital artwork and wallpapers.</p>
-</div>
+/* MOBILE RESPONSIVENESS */
 
-<div class="service-card">
-  <h3>Brand Identity</h3>
-  <p>Consistent visual identities for businesses.</p>
-</div>
+@media(max-width: 700px) {
 
-  </div>
-</section><!-- PORTFOLIO --><section class="portfolio" id="portfolio">
-  <h2 class="section-title">SELECTED <span>WORK</span></h2>  <div class="cards"><div class="work">
-  <img src="abhi-logo.png" alt="Logo Design">
-  <h3>LOGO DESIGN</h3>
-</div>
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
 
-<div class="work">
-  <img src="poster-design.png" alt="Poster Design">
-  <h3>POSTER ART</h3>
-</div>
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
 
-<div class="work">
-  <img src="tshirt-design.png" alt="T-Shirt Design">
-  <h3>T-SHIRT DESIGN</h3>
-</div>
+    .hero {
+        min-height: 450px;
+    }
 
-<div class="work">
-  <img src="wallpaper-design.png" alt="Digital Wallpaper">
-  <h3>DIGITAL WALLPAPER</h3>
-</div>
+    .hero h1 {
+        font-size: 34px;
+    }
 
-  </div>
-</section><!-- PRICING --><section class="pricing" id="pricing">
-  <h2 class="section-title">OUR <span>PRICING</span></h2>  <p class="pricing-intro">
-    Professional designs for brands, businesses and creators.
-  </p>  <div class="pricing-cards"><div class="price-card">
-  <h3>LOGO DESIGN</h3>
-  <p>Creative and memorable brand logos.</p>
-  <div class="price">
-    <span class="naira">₦10,000</span> /
-    <span class="usd">$10</span>
-    <small>NGN / USD</small>
-  </div>
-</div>
+    .hero p {
+        font-size: 16px;
+    }
 
-<div class="price-card">
-  <h3>POSTER DESIGN</h3>
-  <p>Eye-catching promotional posters.</p>
-  <div class="price">
-    <span class="naira">₦5,000</span> /
-    <span class="usd">$5</span>
-    <small>NGN / USD</small>
-  </div>
-</div>
+    .section-title {
+        font-size: 27px;
+    }
 
-<div class="price-card">
-  <h3>T-SHIRT DESIGN</h3>
-  <p>Unique designs for clothing brands.</p>
-  <div class="price">
-    <span class="naira">₦7,000</span> /
-    <span class="usd">$7</span>
-    <small>NGN / USD</small>
-  </div>
-</div>
+    section {
+        padding: 65px 5%;
+    }
 
-<div class="price-card">
-  <h3>DIGITAL WALLPAPER</h3>
-  <p>Custom digital artwork and wallpapers.</p>
-  <div class="price">
-    <span class="naira">₦3,000</span> /
-    <span class="usd">$3</span>
-    <small>NGN / USD</small>
-  </div>
-</div>
+}
 
-<div class="price-card">
-  <h3>BRAND IDENTITY</h3>
-  <p>A consistent visual identity for your brand.</p>
-  <div class="price">
-    <span class="naira">₦25,000</span> /
-    <span class="usd">$25</span>
-    <small>NGN / USD</small>
-  </div>
-</div>
+</style>
+</head>
 
-  </div>
-</section><!-- SOCIAL LINKS --><section class="social-links" id="social">  <h2 class="section-title">
-    FIND US <span>ONLINE</span>
-  </h2>  <p class="social-intro">
-    Connect with us and explore our creative work.
-  </p>  <div class="social-grid"><div class="social-card">
-  <h3>LinkedIn</h3>
-  <p>Connect professionally with ABHI Design Studio.</p>
+<body>
 
-  <a href="https://www.linkedin.com/in/abdullahi-abdulsalam-b30527451"
-     class="social-btn linkedin-btn"
-     target="_blank"
-     rel="noopener noreferrer">
-    CONNECT ON LINKEDIN
-  </a>
-</div>
+<!-- HEADER -->
 
-<div class="social-card">
-  <h3>Behance</h3>
-  <p>Explore our creative designs and portfolio.</p>
+<header>
 
-  <a href="https://www.behance.net/abdullaabdulsa16"
-     class="social-btn behance-btn"
-     target="_blank"
-     rel="noopener noreferrer">
-    VIEW ON BEHANCE
-  </a>
-</div>
+    <div class="logo">
+        <img src="abhi-logo.png" alt="ABHI Design Studio Logo">
+        <h2>ABHI <span>DESIGN STUDIO</span></h2>
+    </div>
 
-  </div></section><!-- CONTACT --><section class="contact" id="contact">
-  <h2 class="section-title">LET'S <span>CONNECT</span></h2>  <p>
-    Have a creative project in mind?
-    Get in touch with ABHI Design Studio.
-  </p><a href="https://wa.me/2349045868393"
-class="whatsapp-btn"
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            WE TURN IDEAS INTO
+            <span>STUNNING DESIGNS</span>
+        </h1>
+
+        <p>
+            Professional graphic design solutions for businesses,
+            brands and individuals worldwide.
+        </p>
+
+        <a href="#portfolio" class="btn">
+            EXPLORE OUR DESIGNS
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            CONTACT US
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        ABOUT <span>US</span>
+    </h2>
+
+    <p>
+        ABHI Design Studio is a creative graphic design brand
+        dedicated to transforming ideas into outstanding visual
+        experiences.
+
+        We specialize in logo design, brand identity, promotional
+        posters, T-shirt graphics, digital wallpapers and other
+        creative visual solutions.
+
+        Our goal is to help businesses and individuals communicate
+        their ideas through unique and professional designs.
+    </p>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="section-title">
+        OUR <span>SERVICES</span>
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h3>Logo Design</h3>
+            <p>Unique and professional logos for brands and businesses.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Brand Identity</h3>
+            <p>Creative visual identities that make brands recognizable.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Poster Design</h3>
+            <p>Attractive promotional posters for events and businesses.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>T-Shirt Design</h3>
+            <p>Creative graphics and designs for T-shirts.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Digital Wallpapers</h3>
+            <p>Beautiful wallpapers for phones and digital devices.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Award Designs</h3>
+            <p>Creative award certificates and recognition designs.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <h2 class="section-title">
+        OUR <span>PORTFOLIO</span>
+    </h2>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+            <img src="poster-design.png" alt="Poster Design">
+            <h3>Poster Design</h3>
+        </div>
+
+        <div class="portfolio-card">
+            <img src="tshirt-design.png" alt="T-Shirt Design">
+            <h3>T-Shirt Design</h3>
+        </div>
+
+        <div class="portfolio-card">
+            <img src="wallpaper-design.png" alt="Wallpaper Design">
+            <h3>Digital Wallpaper</h3>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:35px;">
+
+        <a
+        href="https://www.behance.net/gallery/258838335/ABHI-DESIGN-STUDIO-Creative-Graphic-Design"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn">
+
+            VIEW OUR FULL PORTFOLIO
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+    <h2 class="section-title">
+        OUR <span>PRICING</span>
+    </h2>
+
+    <div class="pricing-grid">
+
+        <div class="price-card">
+            <h3>Logo Design</h3>
+            <div class="price">₦10,000 / $10</div>
+            <p>Professional logo creation.</p>
+        </div>
+
+        <div class="price-card">
+            <h3>Poster Design</h3>
+            <div class="price">₦5,000 / $5</div>
+            <p>Creative promotional posters.</p>
+        </div>
+
+        <div class="price-card">
+            <h3>T-Shirt Design</h3>
+            <div class="price">₦7,000 / $7</div>
+            <p>Custom T-shirt graphics.</p>
+        </div>
+
+        <div class="price-card">
+            <h3>Wallpaper Design</h3>
+            <div class="price">₦3,000 / $3</div>
+            <p>Custom digital wallpapers.</p>
+        </div>
+
+        <div class="price-card">
+            <h3>Brand Identity</h3>
+            <div class="price">₦25,000 / $25</div>
+            <p>Complete visual brand identity.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FIND US ONLINE -->
+
+<section class="social" id="social">
+
+    <h2 class="section-title">
+        FIND US <span>ONLINE</span>
+    </h2>
+
+    <p>
+        Connect with ABHI Design Studio and explore our creative work.
+    </p>
+
+    <a
+    href="https://www.linkedin.com/in/abdullahi-abdulsalam-b30527451"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn">
+
+        CONNECT ON LINKEDIN
+
+    </a>
+
+    <a
+    href="https://www.behance.net/abdullaabdulsa16"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn">
+
+        VIEW BEHANCE PROFILE
+
+    </a>
+
+    <a
+    href="https://www.behance.net/gallery/258838335/ABHI-DESIGN-STUDIO-Creative-Graphic-Design"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-outline">
+
+        VIEW OUR LATEST PROJECT
+
+    </a>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        LET'S <span>CONNECT</span>
+    </h2>
+
+    <p>
+        Have a creative project in mind?
+        Get in touch with ABHI Design Studio.
+    </p>
+
+    <p>
+        WhatsApp: 09045868393
+    </p>
+
+    <a
+    href="https://wa.me/2349045868393"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn">
+
+        CHAT WITH US ON WHATSAPP
+
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <span>ABHI DESIGN STUDIO</span>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Creative • Professional • Worldwide
+    </p>
+
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/2349045868393"
 target="_blank"
-rel="noopener">
-CHAT WITH US ON WHATSAPP
+rel="noopener noreferrer"
+class="whatsapp-float">
+
+    WhatsApp
+
 </a>
 
-</section><!-- FLOATING WHATSAPP BUTTON --><a href="https://wa.me/2349045868393"
-class="floating-whatsapp"
-target="_blank"
-rel="noopener"
-aria-label="Chat with us on WhatsApp">
-W
-</a>
-
-<!-- FOOTER --><footer>
-  <p>© 2026 ABHI Design Studio. All Rights Reserved.</p>
-  <p>Designed with creativity by ABHI.</p>
-</footer></body>
+</body>
 </html>
