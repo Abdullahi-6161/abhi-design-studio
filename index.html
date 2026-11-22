@@ -27,15 +27,16 @@ body {
     line-height: 1.7;
 }
 
-/* HEADER */
+/* HEADER AND LOGO */
 
 header {
     background: white;
-    padding: 10px 7%;
+    padding: 10px 7% 15px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 10px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     position: sticky;
     top: 0;
@@ -46,14 +47,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .logo a {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     background: #000;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -66,8 +69,11 @@ header {
 
 nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
 }
 
 nav a {
@@ -86,7 +92,7 @@ nav a:hover {
 
 section {
     padding: 80px 7%;
-    scroll-margin-top: 125px;
+    scroll-margin-top: 160px;
 }
 
 .section-title {
@@ -342,10 +348,26 @@ footer span {
     color: #ff2632;
 }
 
-/* WHATSAPP BUTTON */
+/* MOVABLE FLOATING BUTTONS */
+
+.whatsapp-float,
+.feedback-float {
+    position: fixed;
+    z-index: 1001;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: box-shadow 0.2s;
+}
+
+.whatsapp-float:active,
+.feedback-float:active {
+    cursor: grabbing;
+}
 
 .whatsapp-float {
-    position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25D366;
@@ -354,18 +376,13 @@ footer span {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .whatsapp-float:hover {
     background: #128C7E;
 }
 
-/* FEEDBACK BUTTON */
-
 .feedback-float {
-    position: fixed;
     bottom: 20px;
     left: 20px;
     background: linear-gradient(135deg, #d4af37, #f5df91);
@@ -374,14 +391,16 @@ footer span {
     padding: 14px 20px;
     border-radius: 30px;
     font-weight: bold;
-    cursor: pointer;
-    z-index: 1001;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     font-size: 14px;
 }
 
 .feedback-float:hover {
     background: #c49b20;
+}
+
+.is-dragging {
+    opacity: 0.85;
+    cursor: grabbing !important;
 }
 
 /* FEEDBACK FORM */
@@ -483,9 +502,8 @@ footer span {
 @media(max-width: 700px) {
 
     header {
-        justify-content: center;
+        padding: 8px 4% 12px;
         gap: 8px;
-        padding: 8px 5%;
     }
 
     .logo img {
@@ -520,38 +538,33 @@ footer span {
 
     section {
         padding: 65px 5%;
-        scroll-margin-top: 115px;
+        scroll-margin-top: 145px;
     }
 
     .feedback-box {
         bottom: 80px;
-        left: 12px;
         width: 320px;
         max-width: calc(100% - 24px);
     }
 
     .feedback-float {
-        left: 12px;
-        bottom: 15px;
         padding: 12px 15px;
         font-size: 12px;
     }
 
     .whatsapp-float {
-        right: 12px;
-        bottom: 15px;
         padding: 12px 15px;
         font-size: 12px;
     }
 }
-</style></head><body><!-- HEADER --><header><div class="logo">
-    <a href="#home" aria-label="ABHI Design Studio Home">
-        <img src="abhi-official-logo.png"
-             alt="ABHI Design Studio Official Silver and Gold Logo">
-    </a>
-</div>
-
-<nav aria-label="Main navigation">
+</style></head><body><!-- HEADER: LOGO ALWAYS ABOVE NAVIGATION --><header>
+    <div class="logo">
+        <a href="#home" aria-label="ABHI Design Studio Home">
+            <img
+                src="abhi-official-logo.png"
+                alt="ABHI Design Studio Official Silver and Gold Logo">
+        </a>
+    </div><nav aria-label="Main navigation">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -560,9 +573,8 @@ footer span {
     <a href="#contact">Contact</a>
 </nav>
 
-</header><!-- HERO --><section class="hero" id="home"><div class="hero-content">
-
-    <h1>
+</header><!-- HERO --><section class="hero" id="home">
+    <div class="hero-content">    <h1>
         WE TURN IDEAS INTO
         <span>STUNNING DESIGNS</span>
     </h1>
@@ -650,8 +662,9 @@ footer span {
             target="_blank"
             rel="noopener noreferrer">
 
-            <img src="abhi-official-logo.png"
-                 alt="ABHI Design Studio Logo and Brand Identity Designs">
+            <img
+                src="abhi-official-logo.png"
+                alt="ABHI Design Studio Logo and Brand Identity Designs">
 
         </a>
 
@@ -676,8 +689,9 @@ footer span {
             target="_blank"
             rel="noopener noreferrer">
 
-            <img src="poster-design.png"
-                 alt="Promotional Posters and Advertisements">
+            <img
+                src="poster-design.png"
+                alt="Promotional Posters and Advertisements">
 
         </a>
 
@@ -702,8 +716,9 @@ footer span {
             target="_blank"
             rel="noopener noreferrer">
 
-            <img src="tshirt-design.png"
-                 alt="T-Shirt and Wallpaper Designs">
+            <img
+                src="tshirt-design.png"
+                alt="T-Shirt and Wallpaper Designs">
 
         </a>
 
@@ -845,19 +860,20 @@ footer span {
     Creative • Professional • Worldwide
 </p>
 
-</footer><!-- FLOATING WHATSAPP --><a
+</footer><!-- MOVABLE WHATSAPP BUTTON --><a
 href="https://wa.me/2349045868393"
 target="_blank"
 rel="noopener noreferrer"
 class="whatsapp-float"
+id="whatsappFloat"
 aria-label="Chat with ABHI Design Studio on WhatsApp">
 
 WhatsApp
 
-</a><!-- FLOATING FEEDBACK BUTTON --><button
+</a><!-- MOVABLE FEEDBACK BUTTON --><button
 type="button"
 class="feedback-float"
-onclick="toggleFeedback()"
+id="feedbackFloat"
 aria-label="Open feedback form">
 
 ✨ Give Feedback
@@ -870,7 +886,7 @@ aria-label="Open feedback form">
     aria-modal="false"><button
     type="button"
     class="feedback-close"
-    onclick="toggleFeedback()"
+    id="feedbackClose"
     aria-label="Close feedback form">
 
     ×
@@ -917,7 +933,7 @@ aria-label="Open feedback form">
         <button
             type="button"
             class="feedback-whatsapp"
-            onclick="sendFeedback('whatsapp')">
+            id="feedbackWhatsapp">
 
             WhatsApp
 
@@ -926,7 +942,7 @@ aria-label="Open feedback form">
         <button
             type="button"
             class="feedback-email"
-            onclick="sendFeedback('email')">
+            id="feedbackEmail">
 
             Email
 
@@ -936,28 +952,87 @@ aria-label="Open feedback form">
 
 </form>
 
-</div><!-- FEEDBACK JAVASCRIPT --><script>
+</div><!-- JAVASCRIPT --><script>
+
+/* FEEDBACK FORM OPEN AND CLOSE */
+
+const feedbackBox = document.getElementById("feedbackBox");
+const feedbackButton = document.getElementById("feedbackFloat");
 
 function toggleFeedback() {
 
-    const box = document.getElementById("feedbackBox");
+    const isOpen = feedbackBox.style.display === "block";
 
-    if (box.style.display === "block") {
-        box.style.display = "none";
-    } else {
-        box.style.display = "block";
+    feedbackBox.style.display = isOpen ? "none" : "block";
+
+    if (!isOpen) {
+        positionFeedbackBox();
     }
 
 }
 
+feedbackButton.addEventListener("click", function(event) {
+    if (!feedbackButton.dataset.wasDragged) {
+        toggleFeedback();
+    }
+});
+
+document.getElementById("feedbackClose").addEventListener("click", function() {
+    feedbackBox.style.display = "none";
+});
+
+/* POSITION FEEDBACK FORM NEAR ITS BUTTON */
+
+function positionFeedbackBox() {
+
+    if (feedbackBox.style.display !== "block") return;
+
+    const buttonRect = feedbackButton.getBoundingClientRect();
+
+    const boxWidth = feedbackBox.offsetWidth;
+    const boxHeight = feedbackBox.offsetHeight;
+
+    let left = buttonRect.left;
+    let top = buttonRect.top - boxHeight - 12;
+
+    if (top < 10) {
+        top = buttonRect.bottom + 12;
+    }
+
+    if (left + boxWidth > window.innerWidth - 10) {
+        left = window.innerWidth - boxWidth - 10;
+    }
+
+    if (left < 10) {
+        left = 10;
+    }
+
+    if (top + boxHeight > window.innerHeight - 10) {
+        top = window.innerHeight - boxHeight - 10;
+    }
+
+    if (top < 10) {
+        top = 10;
+    }
+
+    feedbackBox.style.left = left + "px";
+    feedbackBox.style.top = top + "px";
+    feedbackBox.style.right = "auto";
+    feedbackBox.style.bottom = "auto";
+}
+
+window.addEventListener("resize", function() {
+    keepButtonsOnScreen();
+    positionFeedbackBox();
+});
+
+/* SEND FEEDBACK */
+
 function sendFeedback(method) {
 
     const name = document.getElementById("fbName").value.trim();
-
     const email = document.getElementById("fbEmail").value.trim();
-
     const rating = document.getElementById("fbRating").value;
-
     const message = document.getElementById("fbMessage").value.trim();
 
     if (!rating || !message) {
@@ -965,7 +1040,9 @@ function sendFeedback(method) {
         return;
     }
 
-    if (email && !document.getElementById("fbEmail").checkValidity()) {
+    const emailInput = document.getElementById("fbEmail");
+
+    if (email && !emailInput.checkValidity()) {
         alert("Please enter a valid email address.");
         return;
     }
@@ -988,25 +1065,242 @@ Sent from ABHI Design Studio website.`;
     if (method === "whatsapp") {
 
         const whatsappURL =
-        "https://wa.me/2349045868393?text=" +
-        encodeURIComponent(feedback);
+            "https://wa.me/2349045868393?text=" +
+            encodeURIComponent(feedback);
 
-        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+        window.open(whatsappURL, "_blank");
 
     }
 
     else if (method === "email") {
 
         const emailURL =
-        "mailto:abhie6161@gmail.com" +
-        "?subject=" +
-        encodeURIComponent("ABHI Design Studio - Customer Feedback") +
-        "&body=" +
-        encodeURIComponent(feedback);
+            "mailto:abhie6161@gmail.com" +
+            "?subject=" +
+            encodeURIComponent("ABHI Design Studio - Customer Feedback") +
+            "&body=" +
+            encodeURIComponent(feedback);
 
         window.location.href = emailURL;
 
     }
+
+}
+
+document.getElementById("feedbackWhatsapp").addEventListener("click", function() {
+    sendFeedback("whatsapp");
+});
+
+document.getElementById("feedbackEmail").addEventListener("click", function() {
+    sendFeedback("email");
+});
+
+/* DRAGGABLE FLOATING BUTTONS */
+
+function makeDraggable(element, storageKey, defaultPosition) {
+
+    let dragging = false;
+    let moved = false;
+    let startX = 0;
+    let startY = 0;
+    let initialLeft = 0;
+    let initialTop = 0;
+    let activePointer = null;
+
+    function setPosition(left, top) {
+
+        const maxLeft = window.innerWidth - element.offsetWidth;
+        const maxTop = window.innerHeight - element.offsetHeight;
+
+        left = Math.max(0, Math.min(left, maxLeft));
+        top = Math.max(0, Math.min(top, maxTop));
+
+        element.style.left = left + "px";
+        element.style.top = top + "px";
+        element.style.right = "auto";
+        element.style.bottom = "auto";
+
+        return { left, top };
+    }
+
+    function savePosition(left, top) {
+
+        try {
+            localStorage.setItem(
+                storageKey,
+                JSON.stringify({ left, top })
+            );
+        } catch (error) {
+            // The button remains movable even if storage is unavailable.
+        }
+
+    }
+
+    function restorePosition() {
+
+        let saved = null;
+
+        try {
+            saved = JSON.parse(localStorage.getItem(storageKey));
+        } catch (error) {
+            saved = null;
+        }
+
+        if (
+            saved &&
+            Number.isFinite(saved.left) &&
+            Number.isFinite(saved.top)
+        ) {
+            setPosition(saved.left, saved.top);
+        } else {
+
+            const rect = element.getBoundingClientRect();
+
+            let left = defaultPosition.left === "right"
+                ? window.innerWidth - rect.width - 20
+                : 20;
+
+            let top = window.innerHeight - rect.height - 20;
+
+            setPosition(left, top);
+        }
+
+    }
+
+    element.addEventListener("pointerdown", function(event) {
+
+        if (event.button !== undefined && event.button !== 0) return;
+
+        dragging = true;
+        moved = false;
+        activePointer = event.pointerId;
+
+        const rect = element.getBoundingClientRect();
+
+        startX = event.clientX;
+        startY = event.clientY;
+
+        initialLeft = rect.left;
+        initialTop = rect.top;
+
+        element.classList.add("is-dragging");
+
+        element.setPointerCapture(event.pointerId);
+
+    });
+
+    element.addEventListener("pointermove", function(event) {
+
+        if (!dragging || event.pointerId !== activePointer) return;
+
+        const deltaX = event.clientX - startX;
+        const deltaY = event.clientY - startY;
+
+        if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+            moved = true;
+        }
+
+        if (moved) {
+
+            const position = setPosition(
+                initialLeft + deltaX,
+                initialTop + deltaY
+            );
+
+            if (element === feedbackButton) {
+                positionFeedbackBox();
+            }
+
+            savePosition(position.left, position.top);
+
+        }
+
+    });
+
+    function finishDragging(event) {
+
+        if (!dragging || event.pointerId !== activePointer) return;
+
+        dragging = false;
+        activePointer = null;
+
+        element.classList.remove("is-dragging");
+
+        if (moved) {
+
+            element.dataset.wasDragged = "true";
+
+            setTimeout(function() {
+                element.dataset.wasDragged = "";
+            }, 250);
+
+        }
+
+    }
+
+    element.addEventListener("pointerup", finishDragging);
+    element.addEventListener("pointercancel", finishDragging);
+
+    restorePosition();
+
+}
+
+/* INITIALIZE BOTH MOVABLE BUTTONS */
+
+makeDraggable(
+    document.getElementById("whatsappFloat"),
+    "abhi_whatsapp_position",
+    { left: "right" }
+);
+
+makeDraggable(
+    document.getElementById("feedbackFloat"),
+    "abhi_feedback_position",
+    { left: "left" }
+);
+
+/* KEEP BOTH BUTTONS INSIDE THE SCREEN AFTER RESIZING */
+
+function keepButtonsOnScreen() {
+
+    const buttons = [
+        document.getElementById("whatsappFloat"),
+        document.getElementById("feedbackFloat")
+    ];
+
+    buttons.forEach(function(button) {
+
+        const rect = button.getBoundingClientRect();
+
+        let left = Math.max(
+            0,
+            Math.min(rect.left, window.innerWidth - rect.width)
+        );
+
+        let top = Math.max(
+            0,
+            Math.min(rect.top, window.innerHeight - rect.height)
+        );
+
+        button.style.left = left + "px";
+        button.style.top = top + "px";
+        button.style.right = "auto";
+        button.style.bottom = "auto";
+
+        const key = button.id === "whatsappFloat"
+            ? "abhi_whatsapp_position"
+            : "abhi_feedback_position";
+
+        try {
+            localStorage.setItem(
+                key,
+                JSON.stringify({ left, top })
+            );
+        } catch (error) {
+            // Ignore storage errors.
+        }
+
+    });
 
 }
 
