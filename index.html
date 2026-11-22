@@ -237,6 +237,12 @@ section {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     border: 1px solid #eeeeee;
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--red);
 }
 
 .portfolio-card img {
@@ -252,9 +258,22 @@ section {
 }
 
 .portfolio-card h3 {
-    padding: 15px;
+    padding: 15px 15px 5px;
     text-align: center;
     color: #222;
+}
+
+.portfolio-card .project-link {
+    display: block;
+    text-align: center;
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 15px 20px;
+}
+
+.portfolio-card .project-link:hover {
+    color: #b80009;
 }
 
 /* PRICING */
@@ -517,19 +536,85 @@ footer span {
 
     <div class="portfolio-grid">
 
-        <div class="portfolio-card">
-            <img src="poster-design.png" alt="Poster Design">
-            <h3>Poster Design</h3>
-        </div>
+        <!-- LOGO & BRAND IDENTITY -->
 
         <div class="portfolio-card">
-            <img src="tshirt-design.png" alt="T-Shirt Design">
-            <h3>T-Shirt Design</h3>
+
+            <a
+            href="https://www.behance.net/gallery/258848825/ABHI-Design-Studio-Logo-Brand-Identity-Designs"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                <img src="abhi-logo.png" alt="Logo and Brand Identity Designs">
+
+            </a>
+
+            <h3>Logo & Brand Identity</h3>
+
+            <a
+            class="project-link"
+            href="https://www.behance.net/gallery/258848825/ABHI-Design-Studio-Logo-Brand-Identity-Designs"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                VIEW PROJECT →
+
+            </a>
+
         </div>
 
+        <!-- PROMOTIONAL POSTERS -->
+
         <div class="portfolio-card">
-            <img src="wallpaper-design.png" alt="Wallpaper Design">
-            <h3>Digital Wallpaper</h3>
+
+            <a
+            href="https://www.behance.net/gallery/258848969/ABHI-Design-Studio-Promotional-Posters"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                <img src="poster-design.png" alt="Promotional Posters and Advertisements">
+
+            </a>
+
+            <h3>Promotional Posters</h3>
+
+            <a
+            class="project-link"
+            href="https://www.behance.net/gallery/258848969/ABHI-Design-Studio-Promotional-Posters"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                VIEW PROJECT →
+
+            </a>
+
+        </div>
+
+        <!-- T-SHIRT & WALLPAPER DESIGNS -->
+
+        <div class="portfolio-card">
+
+            <a
+            href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                <img src="tshirt-design.png" alt="T-Shirt and Wallpaper Designs">
+
+            </a>
+
+            <h3>T-Shirt & Wallpaper Designs</h3>
+
+            <a
+            class="project-link"
+            href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                VIEW PROJECT →
+
+            </a>
+
         </div>
 
     </div>
@@ -537,12 +622,12 @@ footer span {
     <div style="text-align:center; margin-top:35px;">
 
         <a
-        href="https://www.behance.net/gallery/258838335/ABHI-DESIGN-STUDIO-Creative-Graphic-Design"
+        href="https://www.behance.net/abdullaabdulsa16"
         target="_blank"
         rel="noopener noreferrer"
         class="btn">
 
-            VIEW OUR FULL PORTFOLIO
+            VIEW ALL BEHANCE PROJECTS
 
         </a>
 
@@ -627,12 +712,12 @@ footer span {
     </a>
 
     <a
-    href="https://www.behance.net/gallery/258838335/ABHI-DESIGN-STUDIO-Creative-Graphic-Design"
+    href="https://www.behance.net/gallery/258849751/ABHI-Design-Studio-T-Shirt-Wallpaper-Designs"
     target="_blank"
     rel="noopener noreferrer"
     class="btn btn-outline">
 
-        VIEW OUR LATEST PROJECT
+        VIEW LATEST PROJECT
 
     </a>
 
